@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/code-build-demo/sandeep-demo-project:$SHORT_SHA', '.']
+  timeout: 500s
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/code-build-demo/sandeep-demo-project:$SHORT_SHA', '.']
+  timeout: 500s
