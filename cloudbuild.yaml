@@ -6,4 +6,4 @@ steps:
   args: ['push', 'gcr.io/code-build-demo/sandeep-demo-project:$SHORT_SHA']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'code-build-project, '--region=europe-west1', '--platform=managed', '--image=gcr.io/code-build-demo/sandeep-demo-project:$SHORT_SHA']
+  args: ['run', 'deploy', 'code-build-project', '--region=europe-west1', '--platform=managed', '--image=gcr.io/code-build-demo/sandeep-demo-project:$SHORT_SHA']
