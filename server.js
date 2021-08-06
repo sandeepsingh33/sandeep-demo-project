@@ -43,6 +43,8 @@ var server = http.createServer(function (req, res) {   //create web server
 
 });
 
-server.listen(8081); //6 - listen for any incoming requests
-
-console.log('Node.js web server at port 8080 is running..')
+//server.listen(8081); //6 - listen for any incoming requests
+const port = process.env.PORT || 8080;
+server.listen(port, () => {
+  console.log('Hello world listening on port', port);
+});
