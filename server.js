@@ -45,4 +45,4 @@ var server = http.createServer(function (req, res) {   //create web server
 
 server.listen(8080); //6 - listen for any incoming requests
 
-console.log('Node.js web server at port 5000 is running..')
+console.log('Node.js web server at port 8080 is running..')
