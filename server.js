@@ -7,7 +7,20 @@ var server = http.createServer(function (req, res) {   //create web server
         res.writeHead(200, { 'Content-Type': 'text/html' }); 
         
         // set response content    
-        res.write('<html><body><h1>This is home Page.</h1></body></html>');
+        res.write('<html>
+                  <body>
+                  <h1>This is home Page.</h1>
+                  <form action="/student" method="post">
+                  <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                  </form>
+                  </body>
+                  </html>');
         res.end();
     
     }
